@@ -81,6 +81,8 @@ WSGI_APPLICATION = "base.wsgi.application"
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
+
+SCHEMA = os.environ.get("SCHEMA", "public")
 if os.environ.get("DATABASE") == "postgres":
     DATABASES = {
         "default": {
@@ -89,7 +91,7 @@ if os.environ.get("DATABASE") == "postgres":
             "USER": os.environ.get("DB_USER"),
             "PASSWORD": os.environ.get("DB_PASSWORD"),
             "HOST": os.environ.get("DB_HOST"),
-            "OPTIONS": {"options": "-c search_path=django,public"},
+            "OPTIONS": {"options": f"-c search_path={SCHEMA},public"},
         },
         "remix": {
             "ENGINE": "django.db.backends.postgresql",

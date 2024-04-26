@@ -69,21 +69,19 @@ Before getting started, make sure you have the following installed on your syste
 
 9. Manage all the inspected models field for django admin side.
 
-10. Create django schema in postgres before migrate
-
-11. Run database migrations:
+10. Run database migrations:
 
     ```bash
     python manage.py migrate
     ```
 
-12. Start the development server:
+11. Start the development server:
 
     ```bash
     python manage.py runserver
     ```
 
-13. Open your web browser and visit [http://localhost:8000](http://localhost:8000) to see your Django app in action!
+12. Open your web browser and visit [http://localhost:8000](http://localhost:8000) to see your Django app in action!
 
 ## Usage
 
